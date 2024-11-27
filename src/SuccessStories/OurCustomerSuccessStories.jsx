@@ -40,11 +40,11 @@ const OurCustomerSuccessStories = () => {
         {/* Create Tickets  */}
         <div>
           <div className="flex flex-col md:flex-row">
-            <div className="flex flex-col  md:w-[55%] justify-center px-4 md:px-10 space-y-2">
-              <h3 className="text-[30px] md:text-[30px] lg:text-[35px] text-[#3A6EA5]">
+            <div className="flex flex-col  w-[50%] justify-center px-4 md:px-10 space-y-2 ">
+              <h3 className="text-[30px] text-[#3A6EA5]">
                 Create tickets automatically with AI
               </h3>
-              <p className="text-[20px] text-[#3A6EA5] lg:pr-24">
+              <p className="text-[17px] text-[#3A6EA5] lg:pr-24">
                 Our advanced AI algorithms analyze incoming requests, extract
                 key information, and automatically create comprehensive ticket
                 descriptions. This not only saves time for your support team but
@@ -52,8 +52,8 @@ const OurCustomerSuccessStories = () => {
               </p>
 
             </div>
-            <div className="lg:w-[45%] md:w-[60%] md:mt-20 lg:mt-0 p-4 lg:p-10 ">
-              <img src="./Group 23.png" className="" />
+            <div className="w-[50%] md:mt-20 lg:mt-0 p-4 lg:p-10 ">
+              <img src="./Group 23.png" className="flex ml-20 items-center justify-center w-[400px] h-[250px]" />
             </div>
           </div>
         </div>
