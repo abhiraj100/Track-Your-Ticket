@@ -9,13 +9,14 @@ const HomePage = () => {
         alt="Background Waves"
       />
       
-      <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-between space-y-10 lg:space-y-0 p-6 lg:px-16 relative z-10">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-between space-y-10 lg:space-y-0 p-4 lg:px-16 relative z-10">
         {/* Left Section */}
         <div className="flex-1 flex flex-col space-y-6 text-center lg:text-left">
-          <h1 className="text-[#3A6EA5] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+          <h1 className="text-[#3A6EA5] text-lg sm:text-3xl md:text-4xl lg:text-4xl  font-medium leading-tight">
             Your tickets, automated and accelerated
           </h1>
-          <p className="text-gray-700 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+          {/* <p className="text-gray-700 text-lg sm:text-xl md:text-2xl lg:text-3xl"> */}
+          <p className="text-gray-700 text-xl">
             "Streamline your IT operations with our{" "}
             <span className="text-[#4592E3] font-semibold">
               powerful ticketing system
@@ -40,12 +41,11 @@ const HomePage = () => {
       </div>
 
       {/* Footer Section */}
-      <div className="container mx-auto flex flex-wrap justify-center lg:justify-between items-center gap-6 py-6 mt-10">
-        <img src="01.png" className="w-[120px] sm:w-[150px] lg:w-[200px] h-auto" alt="Brand 1" />
-        <img src="02.png" className="w-[100px] sm:w-[140px] lg:w-[180px] h-auto" alt="Brand 2" />
-        <img src="03.png" className="w-[120px] sm:w-[150px] lg:w-[200px] h-auto" alt="Brand 3" />
-        <img src="04.png" className="w-[120px] sm:w-[150px] lg:w-[200px] h-auto" alt="Brand 4" />
-        <img src="05.png" className="w-[80px] sm:w-[100px] lg:w-[120px] h-auto" alt="Brand 5" />
+      <div className="container mx-auto flex flex-row justify-center gap-10 items-center pt-10 ">
+        <img src="01.png" className="w-[160px]  h-auto" alt="Brand 1" />
+        <img src="02.png" className="w-[110px]  h-auto" alt="Brand 2" />
+        <img src="03.png" className="w-[160px]  h-auto" alt="Brand 3" />
+        <img src="04.png" className="w-[160px]  h-auto" alt="Brand 4" />
       </div>
     </div>
   );

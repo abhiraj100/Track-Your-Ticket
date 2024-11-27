@@ -5,10 +5,12 @@ const Speciality = () => {
     <div className="mx-auto bg-gradient-to-t from-[#EDF7FD]  to-[#FFFFFF]">
       <div className="container mx-auto flex flex-col">
         <div className="md:w-[60%] flex flex-col mx-auto items-center justify-center text-center">
-          <h2 className="lg:text-[48px] text-[30px] text-[#3A6EA5] font-sans">
+          {/* <h2 className="lg:text-[48px] text-[30px] text-[#3A6EA5] font-sans"> */}
+          <h2 className="text-[30px] text-[#3A6EA5] font-sans">
             What makes our tool special?
           </h2>
-          <p className="lg:text-[20px] px-4 md:px-0  text-black">
+          {/* <p className="lg:text-[20px] px-4 md:px-0  text-black"> */}
+          <p className="text-[17px] px-4 md:px-0  text-black">
             T-rack has empowered over 7,500 organizations by delivering 
             customer-driven knowledge management solutions. Here’s why we stand
             out
@@ -16,8 +18,8 @@ const Speciality = () => {
         </div>
         {/* bottom part  */}
         <div className="flex flex-col md:flex-row mt-4 md:mt-8">
-          <div className="md:w-[70%] p-4 ">
-            <ul className="list-disc text-[#3A6EA5] marker:text-[#3A6EA5] text-[16px] md:text-[20px] space-y-4 pr-8 px-4">
+          <div className="w-[50%] p-4 flex justify-center">
+            <ul className="list-disc text-[#3A6EA5] marker:text-[#3A6EA5] text-[16px] pl-20 space-y-2 px-4">
               <li>
                 Customer-Centric Development:{" "}
                 <span className="text-black">
@@ -54,8 +56,8 @@ const Speciality = () => {
               </li>
             </ul>
           </div>
-          <div className="lg:w-[30%]">
-            <img src="puz.png" className="md:mt-[100px] lg:mt-0" />
+          <div className="w-[50%] flex justify-center">
+            <img src="puz.png" className="w-[400px] h-[300px]" />
           </div>
         </div>
       </div>

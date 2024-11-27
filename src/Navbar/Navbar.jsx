@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 const Navbar = () => {
   const [language, setLanguage] = useState("ENG");
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
 
@@ -12,9 +13,28 @@ const Navbar = () => {
     setDropdownOpen(false);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="bg-gradient-to-t from-[#FFFFFF] to-[#EDF7FD] mx-auto shadow-md">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between p-4">
+    <nav
+      className={`sticky top-0 z-50 transition duration-300 ${
+        isScrolled
+          ? "bg-white/70 backdrop-blur-md shadow-md"
+          : "bg-transparent shadow-none"
+      }`}
+    >
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
         {/* Left Side */}
         <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-10">
           <img
@@ -22,12 +42,10 @@ const Navbar = () => {
             alt="Logo"
             className="w-[140px] h-auto object-contain"
           />
-          <ul className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-[18px] md:text-[20px] lg:text-[22px] font-semibold text-gray-700">
+          <ul className="flex flex-col md:flex-row w-[800px] justify-center items-center p-2 sm:bg-gray-100 md:bg-transparent space-y-2 md:space-y-0 md:space-x-6 text-[18px] md:text-[20px] lg:text-[22px] font-normal text-gray-700">
             <li className="hover:text-blue-500 cursor-pointer">Home</li>
-            <li className="hover:text-blue-500 cursor-pointer">Features</li>
             <li className="hover:text-blue-500 cursor-pointer">About Us</li>
-            <li className="hover:text-blue-500 cursor-pointer">Contact Us</li>
-            <li className="hover:text-blue-500 cursor-pointer">Sign in</li>
+            <li className="hover:text-blue-500 cursor-pointer">Our Clients</li>
           </ul>
         </div>
 
@@ -79,37 +97,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-// import React from "react";
-// import { IoIosArrowDown } from "react-icons/io";
-
-// const Navbar = () => {
-//   return (
-//     <nav className="bg-gradient-to-t from-[#FFFFFF] to-[#EDF7FD] mx-auto ">
-//       <div className="container mx-auto flex flex-col items-baseline md:items-baseline lg:flex-row md:justify-between lg:items-start lg:justify-between space-y-2 p-4 lg:p-1">
-//         {/* left side  */}
-//         <div className="flex md:flew-row space-x-6 md:space-x-10">
-//           <img src="./logo.png" className="w-[140px] h-[100px]" />
-//           <ul className="flex flex-col md:flex-row space-x-4 items-center text-[20px] md:text-[24px] lg:text-[28px]">
-//             <li >Home</li>
-//             <li>Features</li>
-//             <li>About Us</li>
-//             <li>Contact Us</li>
-//             <li>Sign in</li>
-//           </ul>
-//         </div>
-//         {/* right side  */}
-//         <div className="flex flex-row items-center space-x-4 mt-4">
-//           <div className="mr-10 bg-gradient-to-t from-[#3A6EA5] to-[#4592E3] px-3 py-1  border-[#3A6EA5] rounded-tl-xl rounded-tr-xl  rounded-bl-xl ">
-//             <p className="text-white text-[24px] md:text-[28px]">Get Started</p>
-//           </div>
-//           <div className="w-[2px] h-[80px] bg-gray-400"></div>
-//           <div className="px-2 flex items-center">ENG{" "}<IoIosArrowDown /></div>
-//         </div>
-//       </div>
-//     </nav>
-//   );
-// };
-
-// export default Navbar;

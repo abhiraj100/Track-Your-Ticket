@@ -1,52 +1,42 @@
 import React from "react";
+import SuccessStories from "./SuccessStories";
 
 const OurCustomerSuccessStories = () => {
   return (
     <div className="mx auto bg-gradient-to-t from-[#EDF7FD] to-[#FFFFFF]">
       <div className="mx-auto container flex flex-col justify-center space-y-6">
-        <div className="">
-          <h2 className="text-[30px] md:text-[40px] lg:text-[48px] text-center font-medium font-sans text-[#3A6EA5]">
-            Our Customer Success Stories
-          </h2>
-          <div className="bg-gradient-to-t from-[#EDF7FD] to-[#FFFFFF] w-[80%] flex flex-col md:flex-row justify-center items-center mx-auto ">
-            <div className="flex flex-col space-y-8  lg:px-6 md:w-[60%]">
-              <h2 className="text-[20px] md:text-[28px] font-sans text-black pt-10">
-                Affy Cloud's expertise transformed our real estate website,
-                elevating user experience and driving sales. Their optimized
-                solutions are the perfect fit for our growing business!
-              </h2>
-              <h2 className="text-[20px] md:text-[28px] font-sans text-black pb-10">
-                Faster response times Improved ticket resolution rates Enhanced
-                team collaboration Data-driven decision making
-              </h2>
-            </div>
-            <div className="flex flex-col items-center justify-center pt-10 pb-10 md:w-[40%] bg-[#4592E32E] rounded-2xl overflow-hidden relative">
-              <div>
-                <img src="./06.png" className="w-[300px] h-[120px]" />
-                <img src="./eleganza.png" className="w-[290px] h-[170px]" />
-              </div>
-            </div>
-          </div>
-        </div>
+      <SuccessStories />
         {/* What makes our tool stand out! */}
         <div>
-          <h2 className="text-[35px] md:text-[50px] lg:text-[60px] text-center font-medium font-sans text-[#3A6EA5]">
+          {/* <h2 className="text-[35px] md:text-[50px] lg:text-[60px] text-center font-medium font-sans text-[#3A6EA5]"> */}
+          <h2 className="text-[35px] text-center font-medium font-sans text-[#3A6EA5]">
             What makes our tool stand out!
           </h2>
-          <div className="flex flex-col md:flex-row">
-            <div className="md:w-[50%] p-4 lg:p-10">
-              <img src="./Group 23.png" />
+          <p className="text-center">T-Rack is the trusted choice for organizations worldwide, offering customer-focused ticketing solutions that are reliable, scalable, and efficient.</p>
+          <div className="flex flex-col md:flex-row mt-6">
+            <div className="md:w-[50%] p-4 flex justify-center">
+              <img src="./Group 23.png" className="w-[400px] h-[250px]" />
             </div>
             <div className="flex flex-col  md:w-[50%] justify-center px-4 md:px-16">
-              <h3 className="text-[30px]  md:text-[48px] text-[#3A6EA5]">Dashboard Reports</h3>
-              <p className="text-[20px] text-[#3A6EA5]">
+              {/* <h3 className="text-[30px]  md:text-[48px] text-[#3A6EA5]">Dashboard Reports</h3> */}
+              <h3 className="text-[30px] text-[#3A6EA5]">Dashboard Reports</h3>
+              {/* <p className="text-[20px] text-[#3A6EA5]">
                 Visualize your support operations in real-time. Track ticket
                 status analyze performance,and identify trends with our
                 intuitive dashboard.
-              </p>
+              </p> */}
+              <ul className="text-[17px] text-[#3A6EA5] list-disc">
+                <li><span className="font-semibold">Real-Time Insights:</span> Gain a live view of your support operations with our dynamic dashboard.</li>
+                <li><span className="font-semibold">Performance Tracking:</span> Monitor ticket status, analyze team productivity, and identify trends.</li>
+                <li><span className="font-semibold">Actionable Analytics:</span> Generate custom reports to drive data-informed decisions.</li>
+              </ul>
             </div>
           </div>
+          <div className="flex flex-row justify-center">
+                <img src="./ai.png" className="ml-16 md:ml-0 w-[70px] h-[70px]" />
+              </div>
         </div>
+
         {/* Create Tickets  */}
         <div>
           <div className="flex flex-col md:flex-row">
@@ -60,9 +50,7 @@ const OurCustomerSuccessStories = () => {
                 descriptions. This not only saves time for your support team but
                 also ensures accuracy and consistency in ticket creation.
               </p>
-              <div>
-                <img src="./adobe illustrator icon.png" className="ml-16 md:ml-0 lg:w-[120px] lg:h-[120px]" />
-              </div>
+
             </div>
             <div className="lg:w-[45%] md:w-[60%] md:mt-20 lg:mt-0 p-4 lg:p-10 ">
               <img src="./Group 23.png" className="" />
