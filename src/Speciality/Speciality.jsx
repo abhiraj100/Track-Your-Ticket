@@ -50,6 +50,8 @@ const Speciality = () => {
             <div className="flex flex-col space-y-4">
               <div>
                 <label className="text-black">Full Name*</label>
+                <br />
+
                 <input
                   type="text"
                   placeholder="Enter your full name"
@@ -58,6 +60,8 @@ const Speciality = () => {
               </div>
               <div>
                 <label className="text-black">Work email*</label>
+                <br />
+
                 <input
                   type="text"
                   placeholder="Enter your Email"
@@ -66,6 +70,8 @@ const Speciality = () => {
               </div>
               <div>
                 <label className="text-black">Company name*</label>
+                <br />
+
                 <input
                   type="text"
                   placeholder="Enter your Company name"
@@ -74,6 +80,7 @@ const Speciality = () => {
               </div>
               <div>
                 <label className="text-black">Phone number*</label>
+                <br />
                 <input
                   type="text"
                   placeholder="Enter your Phone number"

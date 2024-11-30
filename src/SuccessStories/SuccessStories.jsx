@@ -31,7 +31,7 @@ const SuccessStories = () => {
     dots: true, // Enables navigation dots
     infinite: true, // Loop through slides infinitely
     speed: 500, // Transition speed
-    slidesToShow: 3, // Number of slides to show at a time
+    slidesToShow: 4, // Number of slides to show at a time
     slidesToScroll: 1, // Number of slides to scroll per swipe
     responsive: [
       {
