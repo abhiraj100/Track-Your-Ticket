@@ -1,4 +1,7 @@
 import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 const data = [
   {
@@ -21,17 +24,39 @@ const data = [
     title: "Estetico",
     desc: '"Empower Your Workflow with Smart Ticketing Solutions!"',
   },
-
 ];
 
 const SuccessStories = () => {
+  const settings = {
+    dots: true, // Enables navigation dots
+    infinite: true, // Loop through slides infinitely
+    speed: 500, // Transition speed
+    slidesToShow: 3, // Number of slides to show at a time
+    slidesToScroll: 1, // Number of slides to scroll per swipe
+    responsive: [
+      {
+        breakpoint: 1024, // Adjust settings for screen width <= 1024px
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768, // Adjust settings for screen width <= 768px
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <div className="mx-auto bg-gradient-to-t from-[#EDF7FD] to-[#FFFFFF] py-10">
       <div className="mx-auto container flex flex-col space-y-6">
         {/* Header Section */}
         <div className="text-center">
-          {/* <h2 className="text-[30px] md:text-[40px] lg:text-[48px] font-medium font-sans text-[#3A6EA5]"> */}
-          <h2 className="text-[30px]  font-medium font-sans text-[#3A6EA5]">
+          <h2 className="text-[30px] font-medium font-sans text-[#3A6EA5]">
             Our Customer Success Stories
           </h2>
           <p className="text-[20px] font-medium font-sans text-black">
@@ -40,31 +65,101 @@ const SuccessStories = () => {
           </p>
         </div>
 
-        {/* Row Layout */}
-        <div className="flex flex-wrap justify-center gap-6">
+        {/* Slider Section */}
+        <Slider {...settings} className="px-4">
           {data.map((item, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center justify-center bg-white shadow-lg rounded-lg p-4 w-[300px]"
-            >
-              <img
-                src={item.img}
-                alt={item.title}
-                className="w-32 h-32 object-contain rounded-md mb-4"
-              />
-              <h3 className="text-lg font-bold text-[#3A6EA5]">{item.title}</h3>
-              <p className="text-center text-sm text-black mt-2">
-                {item.desc}
-              </p>
+            <div key={index} className="p-4">
+              <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-4">
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="w-32 h-32 object-contain rounded-md mb-4"
+                />
+                <h3 className="text-lg font-bold text-[#3A6EA5]">
+                  {item.title}
+                </h3>
+                <p className="text-center text-sm text-black mt-2">
+                  {item.desc}
+                </p>
+              </div>
             </div>
           ))}
-        </div>
+        </Slider>
       </div>
     </div>
   );
 };
 
 export default SuccessStories;
+
+
+// import React from "react";
+
+// const data = [
+//   {
+//     img: "01.png",
+//     title: "Threads",
+//     desc: '"Automate Support Tickets for Instant Resolution!"',
+//   },
+//   {
+//     img: "02.png",
+//     title: "Stock Mint",
+//     desc: '"Optimize Your Ticketing System for Peak Performance!"',
+//   },
+//   {
+//     img: "03.png",
+//     title: "Eleganza",
+//     desc: '"Streamline Support, Maximize Efficiency"',
+//   },
+//   {
+//     img: "04.png",
+//     title: "Estetico",
+//     desc: '"Empower Your Workflow with Smart Ticketing Solutions!"',
+//   },
+
+// ];
+
+// const SuccessStories = () => {
+//   return (
+//     <div className="mx-auto bg-gradient-to-t from-[#EDF7FD] to-[#FFFFFF] py-10">
+//       <div className="mx-auto container flex flex-col space-y-6">
+//         {/* Header Section */}
+//         <div className="text-center">
+//           {/* <h2 className="text-[30px] md:text-[40px] lg:text-[48px] font-medium font-sans text-[#3A6EA5]"> */}
+//           <h2 className="text-[30px]  font-medium font-sans text-[#3A6EA5]">
+//             Our Customer Success Stories
+//           </h2>
+//           <p className="text-[20px] font-medium font-sans text-black">
+//             Explore real-world testimonials of businesses that have transformed
+//             their support operations with T-Rack.
+//           </p>
+//         </div>
+
+//         {/* Row Layout */}
+//         <div className="flex flex-wrap justify-center gap-6">
+//           {data.map((item, index) => (
+//             <div
+//               key={index}
+//               className="flex flex-col items-center justify-center bg-white shadow-lg rounded-lg p-4 w-[300px]"
+//             >
+//               <img
+//                 src={item.img}
+//                 alt={item.title}
+//                 className="w-32 h-32 object-contain rounded-md mb-4"
+//               />
+//               <h3 className="text-lg font-bold text-[#3A6EA5]">{item.title}</h3>
+//               <p className="text-center text-sm text-black mt-2">
+//                 {item.desc}
+//               </p>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default SuccessStories;
 
 
 
