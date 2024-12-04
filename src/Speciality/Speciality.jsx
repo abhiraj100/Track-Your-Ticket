@@ -88,7 +88,7 @@ const Speciality = () => {
                 />
               </div>
             </div>
-            <button className="bg-gradient-to-l from-[#3A6EA5] to-[#4592E3] rounded-xl px-6 py-3 text-white text-[20px] md:text-[24px]">
+            <button className="bg-gradient-to-l from-[#3A6EA5] to-[#4592E3] rounded-xl px-2 py-2 text-white text-[20px] md:text-[24px] w-[150px] md:w-[200px]">
               Submit
             </button>
             <div className="py-4">

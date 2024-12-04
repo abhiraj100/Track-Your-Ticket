@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const data = [
@@ -52,11 +52,11 @@ const SuccessStories = () => {
   };
 
   return (
-    <div className="mx-auto bg-gradient-to-t from-[#EDF7FD] to-[#FFFFFF] py-10">
-      <div className="mx-auto container flex flex-col space-y-6">
+    <div className="overflow-x-hidden bg-gradient-to-t from-[#EDF7FD] to-[#FFFFFF] py-10">
+      <div className="container mx-auto px-4 flex flex-col space-y-6">
         {/* Header Section */}
         <div className="text-center">
-          <h2 className="text-[30px] font-medium font-sans text-[#3A6EA5]">
+          <h2 className="text-[30px] md:text-[40px] font-medium font-sans text-[#3A6EA5]">
             Our Customer Success Stories
           </h2>
           <p className="text-[20px] font-medium font-sans text-black">
@@ -66,7 +66,7 @@ const SuccessStories = () => {
         </div>
 
         {/* Slider Section */}
-        <Slider {...settings} className="px-4">
+        <Slider {...settings} className="px-2">
           {data.map((item, index) => (
             <div key={index} className="p-4">
               <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-4">
@@ -91,6 +91,7 @@ const SuccessStories = () => {
 };
 
 export default SuccessStories;
+
 
 
 // import React from "react";
